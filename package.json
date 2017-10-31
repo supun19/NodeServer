@@ -1,0 +1,29 @@
+{
+  "name": "nodeserver",
+  "version": "1.0.0",
+  "description": "simple node server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/supun19/NodeServer.git"
+  },
+  "keywords": [
+    "node",
+    "server"
+  ],
+  "author": "supun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supun19/NodeServer/issues"
+  },
+  "homepage": "https://github.com/supun19/NodeServer#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
