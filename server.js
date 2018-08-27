@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/',function (req,res) {
+app.get('/*',function (req,res) {
     res.send(JSON.stringify([
         {
             "id": "1005@158.85.187.61",
