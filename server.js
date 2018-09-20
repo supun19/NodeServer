@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
     next();
 });
 app.post('/conference',function (req,res) {
-    console.log("confernce",req)
+    console.log("confernce",req.body)
     res.send(JSON.stringify({
         'id': 364758328,
         'name': '1234',
