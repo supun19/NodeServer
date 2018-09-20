@@ -22,7 +22,8 @@
   "homepage": "https://github.com/supun19/NodeServer#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mysql": "^2.16.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
