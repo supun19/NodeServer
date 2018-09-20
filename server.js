@@ -5,7 +5,7 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-app.get('/conference',function (req,res) {
+app.post('/conference',function (req,res) {
     res.send(JSON.stringify({
         'id': 364758328,
         'name': '1234',
