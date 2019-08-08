@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const expressWs = require('express-ws')(app);
 const path = require('path');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies
@@ -22,7 +23,12 @@ app.post('/conference',function (req,res) {
 })
 app.get('/',function (req,res) {
     res.sendFile(path.join(__dirname + '/index.html'));
-})
+});
+app.ws('/echo', function(ws, req) {
+    ws.on('message', function(msg) {
+      ws.send("hi i am supun");
+    });
+  });
 app.listen( 3000,function () {
     console.log("ServerListen Port:3000....")
 })
