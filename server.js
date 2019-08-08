@@ -24,7 +24,7 @@ app.post('/conference',function (req,res) {
 app.get('/',function (req,res) {
     res.sendFile(path.join(__dirname + '/index.html'));
 });
-app.ws('/echo', function(ws, req) {
+app.ws('/ws', function(ws, req) {
     ws.on('message', function(msg) {
       ws.send("hi i am supun");
     });
