@@ -3,6 +3,19 @@
 <body>
 
 Node Server Start
+<div id="ajax-content"></div>
 
 </body>
+  <script>
+const Http = new XMLHttpRequest();
+const url='http://localhost:3000/conference';
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+  document.getElementById('ajax-content').innerHTML = Http.responseText
+}
+  
+  </script>
 </html>
