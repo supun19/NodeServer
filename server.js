@@ -10,6 +10,15 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+function makeid(length) {
+    var result = '';
+    var characters = '0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
 app.post('/conference', function (req, res) {
     const validUser = true
 
@@ -18,7 +27,7 @@ app.post('/conference', function (req, res) {
         const data = req.body
         res.status(200);
         res.send(JSON.stringify({
-            'id': 364758328,
+            'id': makeid(9),
             'name': data.name,
             'mail_owner': 'nipuna@moderator.jitsimeet.meetrix.io',
             'start_time': data.start_time,
@@ -27,7 +36,7 @@ app.post('/conference', function (req, res) {
     } else {
         res.status(409);
         res.send(JSON.stringify({
-            'conflict_id': 364758328
+            'conflict_id': makeid(9)
         }));
     }
 
