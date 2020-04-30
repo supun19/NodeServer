@@ -17,7 +17,7 @@ function makeid(length) {
     for (var i = 0; i < length; i++) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-    return result;
+    return parseInt(result);
 }
 app.post('/conference', function (req, res) {
     const validUser = true
