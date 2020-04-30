@@ -25,14 +25,16 @@ app.post('/conference', function (req, res) {
     if (validUser) {
         console.log('conference create', req.body)
         const data = req.body
-        res.status(200);
-        res.send(JSON.stringify({
+        const room = {
             'id': makeid(9),
             'name': data.name,
             'mail_owner': 'nipuna@moderator.jitsimeet.meetrix.io',
             'start_time': data.start_time,
             'duration': 90
-        }));
+        }
+        console.log('conference room', room)
+        res.status(200);
+        res.send(JSON.stringify(room));
     } else {
         res.status(409);
         res.send(JSON.stringify({
