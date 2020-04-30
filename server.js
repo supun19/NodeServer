@@ -28,7 +28,7 @@ app.post('/conference', function (req, res) {
         const room = {
             'id': makeid(9),
             'name': data.name,
-            'mail_owner': 'nipuna@moderator.jitsimeet.meetrix.io',
+            'mail_owner': data.mail_owner,
             'start_time': data.start_time,
             'duration': 90
         }
