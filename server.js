@@ -14,14 +14,14 @@ app.post('/conference', function (req, res) {
     const validUser = true
 
     if (validUser) {
-        console.log('conference create')
+        console.log('conference create', req.body)
         res.status(200);
         res.send(JSON.stringify({
             'id': 364758328,
             'name': '1234',
             'mail_owner': 'nipuna@moderator.jitsimeet.meetrix.io',
             'start_time': '2020-04-28T09:10:40.421Z',
-            'duration': 90000000
+            'duration': 90
         }));
     } else {
         res.status(409);
@@ -32,7 +32,7 @@ app.post('/conference', function (req, res) {
 
 })
 app.delete('/conference/:id', function (req, res) {
-    console.log('conference delete')
+    console.log('conference delete', req.params.id)
     res.status(200);
     res.send().end();
 
