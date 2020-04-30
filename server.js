@@ -15,12 +15,13 @@ app.post('/conference', function (req, res) {
 
     if (validUser) {
         console.log('conference create', req.body)
+        const data = req.body
         res.status(200);
         res.send(JSON.stringify({
             'id': 364758328,
             'name': '123',
             'mail_owner': 'nipuna@moderator.jitsimeet.meetrix.io',
-            'start_time': '2020-04-28T09:10:40.421Z',
+            'start_time': data.start_time,
             'duration': 90
         }));
     } else {
