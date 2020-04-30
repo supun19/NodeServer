@@ -18,7 +18,7 @@ app.post('/conference', function (req, res) {
         res.status(200);
         res.send(JSON.stringify({
             'id': 364758328,
-            'name': '1234',
+            'name': '123',
             'mail_owner': 'nipuna@moderator.jitsimeet.meetrix.io',
             'start_time': '2020-04-28T09:10:40.421Z',
             'duration': 90
