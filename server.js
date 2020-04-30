@@ -12,7 +12,9 @@ app.use(function (req, res, next) {
 });
 app.post('/conference', function (req, res) {
     const validUser = true
+
     if (validUser) {
+        console.log('conference create')
         res.status(200);
         res.send(JSON.stringify({
             'id': 364758328,
@@ -30,6 +32,7 @@ app.post('/conference', function (req, res) {
 
 })
 app.delete('/conference/:id', function (req, res) {
+    console.log('conference delete')
     res.status(200);
     res.send().end();
 
