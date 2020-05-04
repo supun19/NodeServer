@@ -21,10 +21,9 @@ function makeid(length) {
 }
 app.post('/conference', function (req, res) {
     const validUser = true
-
-    if (validUser) {
+    const data = req.body
+    if (data.room == 'test') {
         console.log('conference create', req.body)
-        const data = req.body
         const room = {
             'id': makeid(9),
             'name': data.name,
@@ -36,9 +35,9 @@ app.post('/conference', function (req, res) {
         res.status(200);
         res.send(JSON.stringify(room));
     } else {
-        res.status(409);
+        res.status(403);
         res.send(JSON.stringify({
-            'conflict_id': makeid(9)
+            'message': 'client1 is not allowed to create the room at this time'
         }));
     }
 
