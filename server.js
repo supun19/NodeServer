@@ -22,7 +22,7 @@ function makeid(length) {
 app.post('/conference', function (req, res) {
     const validUser = true
     const data = req.body
-    if (data.room == 'test') {
+    if (data.room == '1234') {
         console.log('conference create', req.body)
         const room = {
             'id': makeid(9),
